@@ -1,6 +1,8 @@
 package com.example.myapplication.database;
 import android.app.Application;
 
+import com.example.myapplication.dao.UserDAO;
+import com.example.myapplication.entities.User;
 import com.example.myapplication.entities.Vacation;
 import com.example.myapplication.entities.Excursion;
 import com.example.myapplication.dao.ExcursionDAO;
@@ -13,16 +15,22 @@ import java.util.concurrent.ExecutorService;
 import androidx.lifecycle.LiveData;
 
 public class Repository {
+    private UserDAO mUserDao;
     private ExcursionDAO mExcursionsDao;
     private VacationDAO mVacationsDao;
     private List<Excursion> mAllExcursions;
     private List<Vacation> mAllVacations;
+
     private static int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
     public Repository(Application application) {
         HotelDatadaseBuilder db = HotelDatadaseBuilder.getDatabase(application);
+        mUserDao = db.userDAO();
         mExcursionsDao = db.excursionDAO();
         mVacationsDao = db.vacationDAO();
+    }
+    public User login(String username, String password){
+        return mUserDao.login(username, password);
     }
 
     public List<Vacation> getAllVacations() {
@@ -36,6 +44,11 @@ public class Repository {
         }
         return mAllVacations;
 
+    }
+    public void insert(User user){
+        databaseExecutor.execute(() -> {
+            mUserDao.insert(user);
+        });
     }
     public void insert(Vacation vacation) {
         databaseExecutor.execute(() -> {
