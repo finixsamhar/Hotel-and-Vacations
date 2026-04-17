@@ -15,7 +15,8 @@ import com.example.myapplication.entities.Vacation;
 
 import java.util.List;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity { //This is the inheritance of the activity
+
 
     private EditText editSearchName;
     private RecyclerView recyclerView;
