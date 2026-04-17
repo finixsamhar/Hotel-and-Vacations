@@ -9,7 +9,7 @@ public class Excursion {
     private String excursionName;
     private String hotel;
     private String date;
-
+    //Here is the encapsulation
     private int vacationId;
 
     public Excursion(int excursionId, String excursionName, String hotel, int vacationId, String date) {
