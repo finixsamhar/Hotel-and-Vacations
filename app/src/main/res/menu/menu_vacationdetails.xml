@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="save vacation"
+        android:textSize="20dp"
+        android:id="@+id/save_vacation"/>
+    <item android:title="update vacation"
+        android:textSize="20dp"
+        android:id="@+id/update_vacation"/>
+    <item android:title="delete vacation"
+        android:textSize="20dp"
+        android:id="@+id/delete_vacation"/>
+    <item android:title="Share Vacation"
+        android:textSize="20dp"
+        android:orderInCategory="100"
+        android:id="@+id/sharevacation"/>
+    <item android:title="Notify"
+        android:textSize="20dp"
+        android:orderInCategory="100"
+        android:id="@+id/notify"/>
+
+</menu>

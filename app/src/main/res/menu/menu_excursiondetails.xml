@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:title="Save Excursion"
+            android:textSize="20dp"
+            android:id="@+id/excursionsave"/>
+    <item android:title="Update Excursion"
+        android:textSize="20dp"
+        android:id="@+id/excursionupdate"/>
+        <item android:title="Delete Excursion"
+            android:textSize="20dp"
+            android:id="@+id/excursiondelete"/>
+        <item android:title="Share Note"
+            android:textSize="20dp"
+            android:orderInCategory="100"
+            android:id="@+id/share"/>
+        <item android:title="Notify"
+            android:textSize="20dp"
+            android:orderInCategory="100"
+            android:id="@+id/notify"/>
+    </menu>
