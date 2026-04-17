@@ -24,7 +24,7 @@ public class SearchActivity extends AppCompatActivity { //This is the inheritanc
     private Repository repository;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //This is the polymorphism
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
