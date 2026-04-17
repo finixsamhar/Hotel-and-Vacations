@@ -239,6 +239,7 @@ public class VacationDetails extends AppCompatActivity {
             String title = editName.getText().toString();
             try{
                 Date startDate = sdf.parse(StartDate);
+                // The following code emphasizes validation functionality of the dates
                 if (startDate != null){
                     long trigger = startDate.getTime();
                     Intent intent = new Intent(VacationDetails.this, MyReceiver.class);
