@@ -27,6 +27,10 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         this.context = context;
         this.repository = new Repository((Application) context.getApplicationContext());
     }
+    public List<Vacation> getVacations() {
+        return mVacations;
+    }
+
 
     @NonNull
     @Override
